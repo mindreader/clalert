@@ -101,25 +101,36 @@ renderResult (Result title url entries) =
         "&nbsp;<a href=\"" <> TLB.fromText subject <> "\">" <>
         TLB.fromText u <> "</a>"
 
+channeln,titlen, linkn, itemn, sourcen, daten :: Traversal' Element Element
+channeln = node "{http://purl.org/rss/1.0/}channel" 
+titlen   = node "{http://purl.org/rss/1.0/}title"
+linkn    = node "{http://purl.org/rss/1.0/}link"
+itemn    = node "{http://purl.org/rss/1.0/}item"
+sourcen  = node "{http://purl.org/dc/elements/1.1/}source"
+daten    = node "{http://purl.org/dc/elements/1.1/}date"
+
 parseResult :: AsXmlDocument a => a -> Result
 parseResult txt = Result title link entries
   where
     title :: Maybe Title
     link :: Maybe URL
-    (title, link) = maybe (Nothing, Nothing) id $ (txt ^.. xml . node "{http://purl.org/rss/1.0/}channel" & over mapped titleandlink) ^? ix 0
+    (title, link) = maybe (Nothing, Nothing) id $
+      (txt ^.. xml . channeln & over mapped titleandlink) ^? ix 0
       where
         titleandlink :: Element -> (Maybe Title, Maybe URL)
-        titleandlink x = (x ^. node "{http://purl.org/rss/1.0/}title" . text & Just . Title, x ^. node "{http://purl.org/rss/1.0/}link" . text & Just . URL)
+        titleandlink x =
+          (x ^. titlen . text & Just . Title,
+           x ^. linkn . text & Just . URL)
 
 
     entries :: [Entry]
-    entries = txt ^.. xml . node "{http://purl.org/rss/1.0/}item" & over each entry
+    entries = txt ^.. xml . itemn & over each entry
       where
         entry :: Element -> Entry
         entry x = Entry
-                (x ^. node "{http://purl.org/rss/1.0/}title" . text & URL)
-                (x ^. node "{http://purl.org/dc/elements/1.1/}source" . text & Subject)
-                (x ^. node "{http://purl.org/dc/elements/1.1/}date" . text & cldateToLocal)
+                (x ^. titlen . text & URL)
+                (x ^. sourcen . text & Subject)
+                (x ^. daten . text & cldateToLocal)
 
 
 mail :: EmailInfo -> LText -> Mail
@@ -156,7 +167,10 @@ main = do
 
   where
     opts = info (helper <*> emailParser) $
-            fullDesc <> progDesc "Simply set the to and from and you will receive an email about the latest and greatest in hard coded motorcyle deals on craigslist in your area which is Louisville." <> header "clalert - alerts you to deals on craigslist"
+            fullDesc <>
+            progDesc "Simply set the to and from and you will receive an email about the latest and greatest \
+                     \in hard coded motorcyle deals on craigslist in your area which is Louisville." <>
+            header "clalert - alerts you to deals on craigslist"
 
     emailParser :: Parser EmailInfo
     emailParser = EmailInfo <$>

@@ -41,10 +41,20 @@ data EmailInfo = EmailInfo {
 newtype Alert = Alert [Search]
 newtype Search = Search Request
 
+newtype Subject = Subject { unSubject :: Text } deriving Show
+newtype Title = Title { unTitle :: Text } deriving Show
+newtype URL = URL { unURL :: Text } deriving Show
+
+data Result = Result {
+  rTitle :: Maybe Title,
+  rURL:: Maybe URL,
+  rEntries :: [Entry]
+}
+
 data Entry = Entry {
-  url :: Text,
-  subject :: Text,
-  date :: Maybe LocalTime
+  eUrl :: URL,
+  eSubject :: Subject,
+  eDate :: Maybe LocalTime
 } deriving Show
 
 
@@ -61,37 +71,56 @@ cldateToLocal datestr = utcToLocalTimeTZ tzLouisville <$> utc
 htmlize :: (Monoid m, IsString m) => m -> m
 htmlize body = "<html><head></head><body>" <> body <> "</body></html>"
 
-fetchSearches :: Alert -> IO LText
-fetchSearches (Alert searches) = fmap (TLB.toLazyText . htmlize . mconcat . intersperse "\n\n") $
+fetchSearches :: Alert -> (LText -> Result) -> (Result -> TLB.Builder) -> IO LText
+fetchSearches (Alert searches) toResult rend = fmap (TLB.toLazyText . htmlize . mconcat . intersperse "\n\n") $
   withManager defaultManagerSettings $ \m ->
     forM searches $ \(Search req) -> do
       withHTTP req m $ \resp -> do
         -- BP.print req
-        txt <- decodeLatin1 <$>
-          PP.fold (\x y -> x <> BB.byteString y) mempty BB.toLazyByteString (responseBody resp)
-
-        let
-          title :: TLB.Builder
-          title = TLB.fromText $ txt ^. xml . deep (node "{http://purl.org/rss/1.0/}title") . text
-
-          entries :: [Entry]
-          entries = txt ^.. xml . node "{http://purl.org/rss/1.0/}item" & over each entry
-            where
-              entry :: Element -> Entry
-              entry x = Entry
-                      (x ^. node "{http://purl.org/rss/1.0/}title" . text)
-                      (x ^. node "{http://purl.org/dc/elements/1.1/}source" . text)
-                      (x ^. node "{http://purl.org/dc/elements/1.1/}date" . text & cldateToLocal)
+        rend . toResult . decodeLatin1 <$>
+          PP.fold (\x y -> x <> BB.byteString y) mempty BB.toLazyByteString (responseBody resp) :: IO TLB.Builder
 
 
-
-        return $ mconcat $ "Search: " <> title <> "\n<ul>" : fmap (("<li>" <>) . (<> "</li>\n") . renderEntry ) entries <> ["</ul><br>\n"]
+renderResult :: Result -> TLB.Builder
+renderResult (Result title url entries) =
+  mconcat $ "Search: " <> renderSearch url title <> "<ul>\n" :
+     fmap (("<li>" <>) . (<> "</li>\n") . renderEntry ) entries
+    <> ["</ul><br>\n"]
   where
+    renderSearch :: Maybe URL -> Maybe Title -> TLB.Builder
+    renderSearch Nothing t = renderTitle t
+    renderSearch (Just u) t = "<a href=\"" <> (TLB.fromText . unURL $ u) <> "\"> " <> renderTitle t <> "</a>"
+
+    renderTitle :: Maybe Title -> TLB.Builder
+    renderTitle Nothing = "No title"
+    renderTitle (Just t) = TLB.fromText . unTitle $ t
+    
     renderEntry :: Entry -> TLB.Builder
-    renderEntry entry =
-        TLB.fromText (maybe "" show $ date entry) <>
-        "&nbsp;<a href=\"" <> TLB.fromText (subject entry) <> "\">" <>
-        TLB.fromText (url entry) <> "</a>"
+    renderEntry (Entry (URL u) (Subject subject) date) =
+        TLB.fromText (maybe "" show date) <>
+        "&nbsp;<a href=\"" <> TLB.fromText subject <> "\">" <>
+        TLB.fromText u <> "</a>"
+
+parseResult :: AsXmlDocument a => a -> Result
+parseResult txt = Result title link entries
+  where
+    title :: Maybe Title
+    link :: Maybe URL
+    (title, link) = maybe (Nothing, Nothing) id $ (txt ^.. xml . node "{http://purl.org/rss/1.0/}channel" & over mapped titleandlink) ^? ix 0
+      where
+        titleandlink :: Element -> (Maybe Title, Maybe URL)
+        titleandlink x = (x ^. node "{http://purl.org/rss/1.0/}title" . text & Just . Title, x ^. node "{http://purl.org/rss/1.0/}link" . text & Just . URL)
+
+
+    entries :: [Entry]
+    entries = txt ^.. xml . node "{http://purl.org/rss/1.0/}item" & over each entry
+      where
+        entry :: Element -> Entry
+        entry x = Entry
+                (x ^. node "{http://purl.org/rss/1.0/}title" . text & URL)
+                (x ^. node "{http://purl.org/dc/elements/1.1/}source" . text & Subject)
+                (x ^. node "{http://purl.org/dc/elements/1.1/}date" . text & cldateToLocal)
+
 
 mail :: EmailInfo -> LText -> Mail
 mail (EmailInfo eto efrom) body =
@@ -108,17 +137,20 @@ search sub criteria = Search def {
           }
 
 defAlert :: Alert
--- defAlert = Alert [motoSearch "(victory | triumph) -suzuki -yamaha", fitSearch "(dumbbell* | dumbell* | \"dumb bell*\" | powerblock* | \"power block*\" | selecttech* | \"select tech*\") -tires"]
 defAlert = Alert [motoSearch "(victory | triumph) -suzuki -yamaha -kafe -lexington"]
   where
     motoSearch :: Text -> Search
     motoSearch = search "mca"
     -- fitSearch = search "sss"
 
+
+test :: IO LText
+test = TLB.toLazyText . renderResult . parseResult <$> XML.readFile def "files/cl.xml"
+
 main :: IO ()
 main = do
   emails <- execParser opts
-  emailTxt <- fetchSearches defAlert
+  emailTxt <- fetchSearches defAlert parseResult renderResult
   BP.putStrLn $ show emails
   renderSendMail $ mail emails emailTxt
 

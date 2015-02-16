@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns="http://purl.org/rss/1.0/" 
+  xmlns:enc="http://purl.oclc.org/net/rss_2.0/enc#" 
+  xmlns:ev="http://purl.org/rss/1.0/modules/event/" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dcterms="http://purl.org/dc/terms/" 
+  xmlns:syn="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/" xmlns:admin="http://webns.net/mvcb/">
+  <channel rdf:about="http://louisville.craigslist.org/search/mcy?format=rss&amp;amp;query=victory&amp;amp;format=rss">
+    <title>craigslist louisville | motorcycles/scooters - by owner search "victory"</title>
+    <link>http://louisville.craigslist.org/search/mcy?query=victory</link>
+    <description/>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&amp;copy; 2015 &lt;span class="desktop"&gt;craigslist&lt;/span&gt;&lt;span class="mobile"&gt;CL&lt;/span&gt;</dc:rights>
+    <dc:publisher>robot@craigslist.org</dc:publisher>
+    <dc:creator>robot@craigslist.org</dc:creator>
+    <dc:source>http://louisville.craigslist.org/search/mcy?format=rss&amp;amp;query=victory&amp;amp;format=rss</dc:source>
+    <dc:title>craigslist louisville | motorcycles/scooters - by owner search "victory"</dc:title>
+    <dc:type>Collection</dc:type>
+    <syn:updateBase>2015-02-04T09:49:23-05:00</syn:updateBase>
+    <syn:updateFrequency>1</syn:updateFrequency>
+    <syn:updatePeriod>hourly</syn:updatePeriod>
+    <items>
+      <rdf:Seq>
+        <rdf:li rdf:resource="http://louisville.craigslist.org/mcy/4869704191.html"/>
+        <rdf:li rdf:resource="http://louisville.craigslist.org/mcy/4869702960.html"/>
+        <rdf:li rdf:resource="http://louisville.craigslist.org/mcy/4868585878.html"/>
+        <rdf:li rdf:resource="http://louisville.craigslist.org/mcy/4868639356.html"/>
+        <rdf:li rdf:resource="http://louisville.craigslist.org/mcy/4867774246.html"/>
+        <rdf:li rdf:resource="http://louisville.craigslist.org/mcy/4869597970.html"/>
+        <rdf:li rdf:resource="http://louisville.craigslist.org/mcy/4833346532.html"/>
+        <rdf:li rdf:resource="http://louisville.craigslist.org/mcy/4855653937.html"/>
+        <rdf:li rdf:resource="http://louisville.craigslist.org/mcy/4810894568.html"/>
+        <rdf:li rdf:resource="http://louisville.craigslist.org/mcy/4829441699.html"/>
+        <rdf:li rdf:resource="http://louisville.craigslist.org/mcy/4800652139.html"/>
+        <rdf:li rdf:resource="http://louisville.craigslist.org/mcy/4829308211.html"/>
+      </rdf:Seq>
+    </items>
+  </channel>
+  <item rdf:about="http://louisville.craigslist.org/mcy/4869704191.html">
+    <title><![CDATA[VICTORY V92C ROAD BIKE (sou jeff co.) &#x0024;3750]]></title>
+    <link>http://louisville.craigslist.org/mcy/4869704191.html</link>
+    <description><![CDATA[2001 V92C Victory 92 Cubic In Motor-Saddle Bags-Windshield-Wire Wheels-Two Tone Maroon and White-EXCELLENT CONDITION NEEDS NOTHING Extra Corbin Seat.]]></description>
+    <dc:date>2015-02-03T20:27:34-05:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&amp;copy; 2015 &lt;span class="desktop"&gt;craigslist&lt;/span&gt;&lt;span class="mobile"&gt;CL&lt;/span&gt;</dc:rights>
+    <dc:source>http://louisville.craigslist.org/mcy/4869704191.html</dc:source>
+    <dc:title><![CDATA[VICTORY V92C ROAD BIKE (sou jeff co.) &#x0024;3750]]></dc:title>
+    <dc:type>text</dc:type>
+    <dcterms:issued>2015-02-03T20:27:34-05:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://louisville.craigslist.org/mcy/4869702960.html">
+    <title><![CDATA[VICTORY V92C ROAD BIKE (sou jeff co.) &#x0024;3750]]></title>
+    <link>http://louisville.craigslist.org/mcy/4869702960.html</link>
+    <description><![CDATA[2001 V92C Victory 92 Cubic In Motor-Saddle Bags-Windshield-Wire Wheels-Two Tone Maroon and White-EXCELLENT CONDITION NEEDS NOTHING Extra Corbin Seat.]]></description>
+    <dc:date>2015-02-03T20:19:59-05:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&amp;copy; 2015 &lt;span class="desktop"&gt;craigslist&lt;/span&gt;&lt;span class="mobile"&gt;CL&lt;/span&gt;</dc:rights>
+    <dc:source>http://louisville.craigslist.org/mcy/4869702960.html</dc:source>
+    <dc:title><![CDATA[VICTORY V92C ROAD BIKE (sou jeff co.) &#x0024;3750]]></dc:title>
+    <dc:type>text</dc:type>
+    <dcterms:issued>2015-02-03T20:19:59-05:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://louisville.craigslist.org/mcy/4868585878.html">
+    <title><![CDATA[VICTORY V92C ROAD BIKE (sou jeff co.) &#x0024;3750]]></title>
+    <link>http://louisville.craigslist.org/mcy/4868585878.html</link>
+    <description><![CDATA[2001 V92C Victory 92 Cubic In Motor-Saddle Bags-Windshield-Wire Wheels-Two Tone Maroon and White-EXCELLENT CONDITION NEEDS NOTHING Extra Corbin Seat.]]></description>
+    <dc:date>2015-02-03T19:57:41-05:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&amp;copy; 2015 &lt;span class="desktop"&gt;craigslist&lt;/span&gt;&lt;span class="mobile"&gt;CL&lt;/span&gt;</dc:rights>
+    <dc:source>http://louisville.craigslist.org/mcy/4868585878.html</dc:source>
+    <dc:title><![CDATA[VICTORY V92C ROAD BIKE (sou jeff co.) &#x0024;3750]]></dc:title>
+    <dc:type>text</dc:type>
+    <dcterms:issued>2015-02-03T19:57:41-05:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://louisville.craigslist.org/mcy/4868639356.html">
+    <title><![CDATA[VICTORY V92C ROAD BIKE (sou jeff co.) &#x0024;3750]]></title>
+    <link>http://louisville.craigslist.org/mcy/4868639356.html</link>
+    <description><![CDATA[2001 V92C Victory 92 Cubic In Motor-Saddle Bags-Windshield-Wire Wheels-Two Tone Maroon and White-EXCELLENT CONDITION NEEDS NOTHING Extra Corbin Seat.]]></description>
+    <dc:date>2015-02-03T19:56:30-05:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&amp;copy; 2015 &lt;span class="desktop"&gt;craigslist&lt;/span&gt;&lt;span class="mobile"&gt;CL&lt;/span&gt;</dc:rights>
+    <dc:source>http://louisville.craigslist.org/mcy/4868639356.html</dc:source>
+    <dc:title><![CDATA[VICTORY V92C ROAD BIKE (sou jeff co.) &#x0024;3750]]></dc:title>
+    <dc:type>text</dc:type>
+    <dcterms:issued>2015-02-03T19:56:30-05:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://louisville.craigslist.org/mcy/4867774246.html">
+    <title><![CDATA[harley davidson wheel chock (louisville) &#x0024;199]]></title>
+    <link>http://louisville.craigslist.org/mcy/4867774246.html</link>
+    <description><![CDATA[Kafe Wheel Chock. The first portable and adjustable armed wheel chock. Doesn't have to be bolted in place. It's made for truck beds and trailers, U-Haul trailers etc. Total weight is only 19 lbs., and only takes a couple seconds to install it. Keeps  [...]]]></description>
+    <dc:date>2015-02-02T14:18:45-05:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&amp;copy; 2015 &lt;span class="desktop"&gt;craigslist&lt;/span&gt;&lt;span class="mobile"&gt;CL&lt;/span&gt;</dc:rights>
+    <dc:source>http://louisville.craigslist.org/mcy/4867774246.html</dc:source>
+    <dc:title><![CDATA[harley davidson wheel chock (louisville) &#x0024;199]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00Q0Q_bIRybR15UfO_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-02-02T14:18:45-05:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://louisville.craigslist.org/mcy/4869597970.html">
+    <title><![CDATA[2000 Victory motorcycle/trade for Fox Body Mustang &#x0024;5500]]></title>
+    <link>http://louisville.craigslist.org/mcy/4869597970.html</link>
+    <description><![CDATA[2000 Victory Motorcycle soft tail...Arlen Ness custom bike. 1507cc 92 cubic inch custom paint, pipes, chrome, low milege and garage kept. Sale $5,500.00 Firm or Trade for Fox Body mustang in great condition only. Ask for Steve....
+ <a href="/fb/lou/mcy/4869597970" class="showcontact" title="click to show contact info">show contact info</a>
+or 502- [...]]]></description>
+    <dc:date>2015-01-29T22:21:56-05:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&amp;copy; 2015 &lt;span class="desktop"&gt;craigslist&lt;/span&gt;&lt;span class="mobile"&gt;CL&lt;/span&gt;</dc:rights>
+    <dc:source>http://louisville.craigslist.org/mcy/4869597970.html</dc:source>
+    <dc:title><![CDATA[2000 Victory motorcycle/trade for Fox Body Mustang &#x0024;5500]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00N0N_hTEkrzHiAF1_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-01-29T22:21:56-05:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://louisville.craigslist.org/mcy/4833346532.html">
+    <title><![CDATA[2013 Victory Vision Tour 106 CI (Brandenburg, Ky.) &#x0024;16000]]></title>
+    <link>http://louisville.craigslist.org/mcy/4833346532.html</link>
+    <description><![CDATA[2013 Victory Vision Tour, 1731 cc, 6 speed, GPS, ABS, AM/FM, cruise, electric adjustable windshield, heated seats, grips, new tires, oil change, fully loaded, 15,000 miles. The bike looks brand new. A great touring machine that will take you in style [...]]]></description>
+    <dc:date>2015-01-27T16:53:26-05:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&amp;copy; 2015 &lt;span class="desktop"&gt;craigslist&lt;/span&gt;&lt;span class="mobile"&gt;CL&lt;/span&gt;</dc:rights>
+    <dc:source>http://louisville.craigslist.org/mcy/4833346532.html</dc:source>
+    <dc:title><![CDATA[2013 Victory Vision Tour 106 CI (Brandenburg, Ky.) &#x0024;16000]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00707_1IYgP6Na4s4_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-01-27T16:53:26-05:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://louisville.craigslist.org/mcy/4855653937.html">
+    <title><![CDATA[Motorcycle **2008 Victory Vegas Low (Louisville) &#x0024;8000]]></title>
+    <link>http://louisville.craigslist.org/mcy/4855653937.html</link>
+    <description><![CDATA[2008 Victory Vegas Low w/1075 miles. 5 speed, chrome package. Garage stored. Too many kids and no time to ride. Asking $8000. Call me. 36one-8seven7-99one two. Let's talk.]]></description>
+    <dc:date>2015-01-20T14:19:37-05:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&amp;copy; 2015 &lt;span class="desktop"&gt;craigslist&lt;/span&gt;&lt;span class="mobile"&gt;CL&lt;/span&gt;</dc:rights>
+    <dc:source>http://louisville.craigslist.org/mcy/4855653937.html</dc:source>
+    <dc:title><![CDATA[Motorcycle **2008 Victory Vegas Low (Louisville) &#x0024;8000]]></dc:title>
+    <dc:type>text</dc:type>
+    <dcterms:issued>2015-01-20T14:19:37-05:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://louisville.craigslist.org/mcy/4810894568.html">
+    <title><![CDATA[ victory - Cory Ness cross country (south louisville) &#x0024;22500]]></title>
+    <link>http://louisville.craigslist.org/mcy/4810894568.html</link>
+    <description><![CDATA[2012 cross country, cory ness custom number 101 . Just over 1000 mi. , diamond cut jugs, quick release pass. Back rest, customized exhaust pipes, tinted short windshield, have factory also, show winner. Awesome looks, ride and sound. Want to keep her [...]]]></description>
+    <dc:date>2015-01-16T19:09:23-05:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&amp;copy; 2015 &lt;span class="desktop"&gt;craigslist&lt;/span&gt;&lt;span class="mobile"&gt;CL&lt;/span&gt;</dc:rights>
+    <dc:source>http://louisville.craigslist.org/mcy/4810894568.html</dc:source>
+    <dc:title><![CDATA[ victory - Cory Ness cross country (south louisville) &#x0024;22500]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00101_5XOpovTLiez_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-01-16T19:09:23-05:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://louisville.craigslist.org/mcy/4829441699.html">
+    <title><![CDATA[2007 Victory Vegas Jackpot, *** NEW LOW PRICE *** (South Louisville) &#x0024;7500]]></title>
+    <link>http://louisville.craigslist.org/mcy/4829441699.html</link>
+    <description><![CDATA[This bike is in excellent shape, has new tires, aftermarket exhaust, bars, flamed grips, mirrors, flamed pegs, flamed seat, red accent lights under tank, flamed engine side covers, victory tach has been added. Has a windshield to go with it. Has 10,1 [...]]]></description>
+    <dc:date>2015-01-14T16:40:48-05:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&amp;copy; 2015 &lt;span class="desktop"&gt;craigslist&lt;/span&gt;&lt;span class="mobile"&gt;CL&lt;/span&gt;</dc:rights>
+    <dc:source>http://louisville.craigslist.org/mcy/4829441699.html</dc:source>
+    <dc:title><![CDATA[2007 Victory Vegas Jackpot, *** NEW LOW PRICE *** (South Louisville) &#x0024;7500]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00Y0Y_bdWNUpcspe2_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-01-14T16:40:48-05:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://louisville.craigslist.org/mcy/4800652139.html">
+    <title><![CDATA[2005 Cory Ness Edition, Victory Vegas (United States) &#x0024;6900]]></title>
+    <link>http://louisville.craigslist.org/mcy/4800652139.html</link>
+    <description><![CDATA[I am selling my 2005 Cory Ness Edition, Victory Vegas . This bike comes standard with several custom accessories for that series that really set this one off and makes it a must have! With very low mileage (11,600), this bike has been Garage kept and [...]]]></description>
+    <dc:date>2015-01-05T16:42:31-05:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&amp;copy; 2015 &lt;span class="desktop"&gt;craigslist&lt;/span&gt;&lt;span class="mobile"&gt;CL&lt;/span&gt;</dc:rights>
+    <dc:source>http://louisville.craigslist.org/mcy/4800652139.html</dc:source>
+    <dc:title><![CDATA[2005 Cory Ness Edition, Victory Vegas (United States) &#x0024;6900]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00D0D_82KEgLg1xi7_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-01-05T16:42:31-05:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://louisville.craigslist.org/mcy/4829308211.html">
+    <title><![CDATA[2011 Victory Cross Country (louisville) &#x0024;12000]]></title>
+    <link>http://louisville.craigslist.org/mcy/4829308211.html</link>
+    <description><![CDATA[2011 Victory Cross Country with custom exhaust with excellent sound at idle and on the road. One owner garage housed never been wrecked.]]></description>
+    <dc:date>2015-01-02T15:00:04-05:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&amp;copy; 2015 &lt;span class="desktop"&gt;craigslist&lt;/span&gt;&lt;span class="mobile"&gt;CL&lt;/span&gt;</dc:rights>
+    <dc:source>http://louisville.craigslist.org/mcy/4829308211.html</dc:source>
+    <dc:title><![CDATA[2011 Victory Cross Country (louisville) &#x0024;12000]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00o0o_9q3CR1LAbeb_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-01-02T15:00:04-05:00</dcterms:issued>
+  </item>
+</rdf:RDF>

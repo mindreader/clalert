@@ -149,7 +149,7 @@ search sub criteria = Search def {
           }
 
 defAlert :: Alert
-defAlert = Alert [motoSearch "(victory | triumph) -suzuki -yamaha -kafe -lexington"]
+defAlert = Alert [motoSearch "(victory | triumph) -suzuki -yamaha -kafe -lexington -tour"]
   where
     motoSearch :: Text -> Search
     motoSearch = search "mca"

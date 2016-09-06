@@ -7,3 +7,5 @@ Install with haskell stack (https://docs.haskellstack.org/en/stable/README/)
 2. Clone this repository.
 3. stack setup (may not be necessary)
 4. stack install
+
+usage: clnotify -t youremail@blah.com -f fromemail@blah.com

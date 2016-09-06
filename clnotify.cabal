@@ -19,8 +19,8 @@ executable clnotify
   -- other-modules:       
   other-extensions:    OverloadedStrings
   build-depends:
-    base >=4.7 && <4.8,
-    mime-mail >=0.4 && <0.5,
+    base >=4.7,
+    mime-mail >=0.4,
     pipes >= 4.0,
     pipes-http,
     xml-conduit,
@@ -33,7 +33,6 @@ executable clnotify
     bytestring,
     system-filepath,
     time,
-    old-locale,
     tz,
     optparse-applicative >= 0.9
   hs-source-dirs:   src

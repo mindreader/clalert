@@ -24,12 +24,12 @@ import Text.XML as XML
 import Text.Xml.Lens
 import Control.Lens
 
-import Data.Time (LocalTime, parseTime)
+import Data.Time (LocalTime, parseTimeM)
 
 import Data.Time.Zones (utcToLocalTimeTZ)
 import Data.Time.Zones.TH (includeTZFromDB)
 
-import System.Locale (defaultTimeLocale)
+import Data.Time.Format (defaultTimeLocale)
 
 import Options.Applicative
 
@@ -67,14 +67,14 @@ cldateToLocal datestr = utcToLocalTimeTZ tzLouisville <$> utc
   where
     datefmt = "%FT%X%z"
     tzLouisville = $(includeTZFromDB "America/Louisville")
-    utc = parseTime defaultTimeLocale datefmt . textToString $ datestr
+    utc = parseTimeM True defaultTimeLocale datefmt . textToString $ datestr
 
 htmlize :: (Monoid m, IsString m) => m -> m
 htmlize body = "<html><head></head><body>" <> body <> "</body></html>"
 
 fetchSearches :: Alert -> (LText -> Result) -> (Result -> TLB.Builder) -> IO LText
 fetchSearches (Alert searches) toResult rend = fmap (TLB.toLazyText . htmlize . mconcat . intersperse "\n\n") $
-  withManager defaultManagerSettings $ \m ->
+  newManager defaultManagerSettings >>= \m ->
     forM searches $ \(Search req) -> do
       withHTTP req m $ \resp -> do
         -- BP.print req
